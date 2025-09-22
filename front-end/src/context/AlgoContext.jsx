@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 export const AlgoContext = createContext();
 
 const AlgoContextProvider = ({ children }) => {
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const [array, setArray] = useState([1, 41, 8, 29, 12, 7]);
   const [sorting, setIsSorting] = useState(false);
   const [animationSpeed, setAnimationSpeed] = useState(800);
@@ -13,6 +14,7 @@ const AlgoContextProvider = ({ children }) => {
   const [step, setCurrentStep] = useState("");
   const navigate = useNavigate();
   const [isPlaying, setIsPlaying] = useState(false);
+  const [token,setToken] = useState('');
 
   const createLinkedListFromArray = (arr) => {
     return arr.map((value, index) => ({
@@ -581,7 +583,8 @@ const AlgoContextProvider = ({ children }) => {
     queue, setQueue, renderQueue, animateQueue,
     isPlaying, setIsPlaying, changeAnimationSpeed,
     heap, setHeap, heapSize, setHeapSize,
-    animateHeap, renderHeap, heapified, setHeapified
+    animateHeap, renderHeap, heapified, setHeapified,
+    backendUrl, token, setToken
   }
 
   return (

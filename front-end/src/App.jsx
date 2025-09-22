@@ -14,7 +14,7 @@ import BinaryHeap from './pages/BinaryHeap'
 import Footer from './components/Footer'
 import Algorithms from './pages/Algorithms'
 import SearchBar from './components/SearchBar'
-import { LoginForm } from './components/Login'; // adjust path if needed
+import Login from './pages/Login' 
 
 const App = () => {
   return (
@@ -35,7 +35,7 @@ const App = () => {
           {/* <Route path='/algorithm/:id/' element={AlgorithmPage} />  */}
           <Route path ='/collections/binaryheaps' element={<BinaryHeap />}/>
           <Route path ='/algorithms' element={<Algorithms />}/>
-           <Route path="/login" element={<LoginForm onClose={() => {}} switchToRegister={() => {}} />} />
+           <Route path='/login' element={<Login/>} />
         </Routes>
       <Footer/>
     </div>

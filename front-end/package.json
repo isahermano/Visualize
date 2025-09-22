@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
+    "axios": "^1.12.2",
     "dom": "^0.0.3",
     "framer-motion": "^12.23.12",
     "postcss": "^8.5.6",

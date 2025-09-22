@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useAuth } from '../hooks/useAuth';
 
 const LoginForm = ({ onClose, switchToRegister }) => {
   const [formData, setFormData] = useState({ email: '', password: '' });
